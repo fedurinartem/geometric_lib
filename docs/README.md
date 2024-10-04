@@ -41,12 +41,12 @@
    -area (a, b, c) a=7 b=8 c=9, возвращает число 12
    -perimeter(a, b ,c ) a=2 b=4 c=7, возвращает число 11
 # История коммитов
-6128a2c (HEAD -> documentation) added documentation
-2944c15 added documentation
-efa1caa added documentation
-b5b0fae (origin/develop) L-04: Update docs for calculate.py
-d76db2a L-04: Add calculate.py
-51c40eb L-04: Doc updated for triangle
-d080c78 L-04: Triangle added
-d078c8d (origin/main, main) L-03: Docs added
-8ba9aeb L-03: Circle and square added
+-6128a2c (HEAD -> documentation) added documentation
+-2944c15 added documentation
+-efa1caa added documentation
+-b5b0fae (origin/develop) L-04: Update docs for calculate.py
+-d76db2a L-04: Add calculate.py
+-51c40eb L-04: Doc updated for triangle
+-d080c78 L-04: Triangle added
+-d078c8d (origin/main, main) L-03: Docs added
+-8ba9aeb L-03: Circle and square added
