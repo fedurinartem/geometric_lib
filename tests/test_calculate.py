@@ -63,8 +63,6 @@ class TestCalc(unittest.TestCase):
             str(context.exception),
             "Can't use negative values for figure dimensions."
         )
-
-
 if __name__ == '__main__':
     unittest.main()
     
