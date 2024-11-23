@@ -52,7 +52,8 @@ class TestCalc(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calc("circle", "area", [radius])
         self.assertEqual(
-            str(context.exception), "Can't use negative values for figure dimensions."
+            str(context.exception), 
+            "Can't use negative values for figure dimensions."
         )
 
     def test_square_negative(self):
@@ -60,7 +61,8 @@ class TestCalc(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             calc("square", "area", [side])
         self.assertEqual(
-            str(context.exception), "Can't use negative values for figure dimensions."
+            str(context.exception), 
+            "Can't use negative values for figure dimensions."
         )
 
 
