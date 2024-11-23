@@ -12,7 +12,7 @@ def calc(fig, func, size):
 		)
 	if func not in funcs:
 		raise ValueError(
-			f"Invalid function: {func}. Avaliable figures are: {funcs}"
+			f"Invalid function: {func}. Avaliable functions are: {funcs}"
 		)
 	if any(s<0 for s in size):
 		raise ValueError("Can't use negative values for figure dimensions.")

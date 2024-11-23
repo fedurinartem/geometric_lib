@@ -1,48 +1,49 @@
 name: CI Workflow
 
 on:
-    push:
-        branches:
-            -main
-            -release
-    pull_request:
-        branches:
-            -main
-            -release
-            -develop
+  push:
+    branches:
+      - main
+      - release
+  pull_request:
+    branches:
+      - main
+      - release
+      - develop
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        env:
-            FULL_NAME: "Федурин Артем Евгеньевич"
-            GROUP_NUMBER: "M3115"
-        
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+    env:
+      FULL_NAME: "Федурин Артем"
+      GROUP_NUMBER: "M3115"
 
-            - name: Output personal information
-              run: |
-                echo "ФИО: $FULL_NAME"
-                echo "Номер группы: $GROUP_NUMBER"
-                echo "Github Nickname: $GITHUB_ACTOR"
-            
-            - name: Set up Python 3.13
-              uses: actions/setup-python@v4
-              with:
-                python-version: '3.13'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-            - name: List directory contents
-              run: |
-                echo "Содержимое текущего каталога:"
-                ls -la
-            - name: Run test
-              run: |
-                python -m unittest discover -s tests
-            - name: Check code style
-              run: |
-                pip install flake8
-                flake 8 . || (echo "Code style issues found. Attempting to auto-fix..." && autopep --in-place --aggressive --aggressive .)
-                
+      - name: Output personal information
+        run: |
+          echo "ФИО: $FULL_NAME"
+          echo "Номер группы: $GROUP_NUMBER"
+          echo "GitHub Nickname: $GITHUB_ACTOR"
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: List directory contents
+        run: |
+          echo "Содержимое текущего каталога:"
+          ls -la
+
+      - name: Run tests
+        run: |
+          python -m unittest discover -s tests
+
+      - name: Check code style
+        run: |
+          pip install flake8 
+          flake8 . || (echo "Code style issues found. Attempting to auto-fix..." && autopep8 --in-place --aggressive --aggressive .)
