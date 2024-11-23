@@ -14,5 +14,6 @@ class TestSquare(unittest.TestCase):
         actual_perimeter = perimeter(side)
         self.assertEqual(actual_perimeter, expected_perimeter)
 
+
 if __name__ == '__main__':
     unittest.main()

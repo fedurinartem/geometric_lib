@@ -18,5 +18,6 @@ class TestTriangle(unittest.TestCase):
         actual_perimeter = perimeter(first_side, second_side, third_side)
         self.assertEqual(actual_perimeter, expected_perimeter)
 
+
 if __name__ == '__main__':
     unittest.main()
