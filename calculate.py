@@ -9,11 +9,11 @@ sizes = {}
 def calc(fig, func, size):
     if fig not in figs:
         raise ValueError(
-            f"Invalid figure: {fig}. Avaliable figures are: {figs}"
+            f"Invalid figure: {fig}. Available figures are: {figs}"
         )
     if func not in funcs:
         raise ValueError(
-            f"Invalid function: {func}. Avaliable functions are: {funcs}"
+            f"Invalid function: {func}. Available functions are: {funcs}"
         )
     if any(s < 0 for s in size):
         raise ValueError("Can't use negative values for figure dimensions.")
