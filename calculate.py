@@ -9,12 +9,12 @@ sizes = {}
 def calc(fig, func, size):
     if fig not in figs:
         raise ValueError(
-            f"Invalid figure: {fig}."
+            f"Invalid figure: {fig}. "
             "Available figures are: ['circle', 'square']"
         )
     if func not in funcs:
         raise ValueError(
-            f"Invalid function: {func}."
+            f"Invalid function: {func}. "
             "Available functions are: ['perimeter', 'area']"
         )
     if any(s < 0 for s in size):
