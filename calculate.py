@@ -27,24 +27,3 @@ def calc(fig, func, size):
             return square.perimeter(size[0])
         elif func == 'area':
             return square.area(size[0])
-
-
-try:
-    figure = 'circle'
-    function = 'area'
-    dimensions = [5]
-    result = calc(figure, function, dimensions)
-    print(
-        f"The {function} of the {figure} with dimension {dimensions} "
-        f"is: {result}"
-    )
-    figure = 'square'
-    function = 'perimeter'
-    dimensions = [4]
-    result = calc(figure, function, dimensions)
-    print(
-        f"The {function} of the {figure} with dimension {dimensions} "
-        f"is: {result}"
-    )
-except ValueError as e:
-    print(e)
