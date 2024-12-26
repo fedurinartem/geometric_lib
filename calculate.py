@@ -2,8 +2,8 @@ import circle
 import square
 
 
-figs = ["circle", "square"]
-funcs = ["perimeter", "area"]
+figs = {'circle': circle, 'square': square}
+funcs = ['perimeter', 'area']
 sizes = {}
 
 
